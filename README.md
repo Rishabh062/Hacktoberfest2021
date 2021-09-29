@@ -1,6 +1,8 @@
 # Hacktoberfest2021
 ## Hey 👋 everyone , *hacktoberfest* is back with biggest beginners friendly opensource event. Event will start from 1st of October and will remain upto 31st October 2021.
 
+## ⚠️⚠️ Note : Contribution will we counted from 1st of october so kindly contributed  from them only.
+
 ### What you need to do in this event?
 **You need to generate 4 valid pull request and want to contribute in opensource**
 
