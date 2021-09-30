@@ -49,7 +49,6 @@ int main(){
     int b[n];
     for(int i=0; i<n; i++)
         scanf("%d", &b[i]);
-    int B[] = {1, 2, 3, 4, 5, 6};
     quickSort(b, 0, 5);
     printArray(b, 6);
     printf("Swaps:%d", swap);
