@@ -78,7 +78,7 @@ int main()
        {
            endTime[i] = startTime[i] + Duration[i];
        }
-       // Max Profit------------------------------------->
+       // Max Profit-------------------------------------
        cout <<jobScheduling(startTime, endTime, Profit);
     }
     return 0;
