@@ -1,4 +1,4 @@
-//  ---------------- OUTPUT -----------------------
+//  ---------------- OUTPUT ---------------------
 // Enter the number of coins
 // 3
 // Enter the type of coins
