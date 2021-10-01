@@ -33,7 +33,7 @@ int main()
         }
     } while (ch != 0);
 }
-
+//to insert elements in Array 
 void insertq(int queue[], int item)
 {
     if ((front == 0 && rear == size - 1) || (front == rear + 1))
@@ -56,7 +56,7 @@ void insertq(int queue[], int item)
     }
     queue[rear] = item;
 }
-
+//to dispaly the Array 
 void display(int queue[])
 {
     int i;
@@ -76,7 +76,7 @@ void display(int queue[])
             printf("%d ", queue[i]);
     }
 }
-
+//to delete a element in array 
 void deleteq(int queue[])
 {
     if (front == -1)
