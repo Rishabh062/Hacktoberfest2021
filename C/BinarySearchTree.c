@@ -2,6 +2,8 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+
+// A binary tree node has a pointer to left child, information and a pointer to right child
 struct node
 {
     struct node *left;
@@ -10,6 +12,7 @@ struct node
 };
 typedef struct node *bstnode;
 
+// Function to Insert a node in BST
 bstnode Insert(bstnode t, int x)
 {
     if(t==NULL)
@@ -40,6 +43,7 @@ bstnode Insert(bstnode t, int x)
     return t;
 }
 
+// Function for In-order Traversal
 void Inorder (bstnode t)
 {
     if(t!=NULL)
@@ -50,6 +54,7 @@ void Inorder (bstnode t)
     }
 }
 
+// Function for Pre-order Traversal
 void Preorder (bstnode t)
 {
     if(t!=NULL)
@@ -60,6 +65,7 @@ void Preorder (bstnode t)
     }
 }
 
+// Function for Post-order Traversal
 void Postorder(bstnode t)
 {
     if(t!=NULL)
@@ -69,6 +75,8 @@ void Postorder(bstnode t)
         printf("%d\t",t->info);
     }
 }
+
+// Function to Find the smallest element in BST
 bstnode Findmin(bstnode t)
 {
     if(t==NULL)
@@ -82,6 +90,7 @@ bstnode Findmin(bstnode t)
     }
 }
 
+// Function to Find the Largest element in BST
 bstnode Findmax(bstnode t)
 {
     if(t==NULL)
@@ -95,6 +104,7 @@ bstnode Findmax(bstnode t)
     }
 }
 
+// Function to Delete a node of BST
 bstnode Delete(bstnode t, int x)
 {
     bstnode temp;
@@ -131,6 +141,7 @@ bstnode Delete(bstnode t, int x)
     return t;
 }
 
+// Function to Search for an element in BST
 bstnode Search(bstnode t, int x)
 {
     if(t==NULL)
@@ -147,6 +158,7 @@ bstnode Search(bstnode t, int x)
     }
 }
 
+// Main Function
 void main()
 {
     bstnode root=NULL,temp;
@@ -156,6 +168,7 @@ void main()
         printf("\n1.INSERT\n2.DELETE\n3.SEARCH\n4.INORDER TRAVERSAL\n5.PREORDER\n6.POSTORDER\n7.FINDMIN\n8.FINDMAX\n0.QUIT\n");
         printf("\nENTER YOUR CHOICE\t: ");
         scanf("%d",&ch);
+        // Proceed according to user's choice
         switch(ch)
         {
             case 1: printf("\n Enter element to be inserted\t");
@@ -215,8 +228,8 @@ void main()
                          if(temp!=NULL)
                             printf("\nLARGEST ELEMENT IS %d\n",temp->info);
                      }
-            case 0: break;
-            default: printf("\nWRONG CHOICE");
+            case 0: break;  // Exit the loop
+            default: printf("\nWRONG CHOICE");  // Invalid choice
         }
     }
     return 0;
