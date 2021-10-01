@@ -1,4 +1,16 @@
 //This algorithms assumes that edges are bidirectional and graph is connected
+// Question: Find the best path between among nodes(graph)?
+/*
+We are using Recursive DFS here. The algo is provided below having complexity of O(Vertex + Edges):
+1. Mark the current node as visited(initially current node is the root node)
+2. Check if current node is the goal, If so, then return it.
+3. Iterate over children nodes of current node, and do the following:
+    1. Check if a child node is not visited.
+    2. If so, then, mark it as visited.
+    3. Go to it's sub tree recursively until you find the goal node(In other words, do the same steps here passing the child node as the current node in the next recursive call).
+    4. If the child node has the goal node in this sub tree, then, return it.
+3. If goal node is not found, then goal node is not in the tree!
+*/
 
 #include<iostream> 
 #include<vector>
