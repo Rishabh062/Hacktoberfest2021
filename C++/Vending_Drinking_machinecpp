@@ -1,3 +1,8 @@
+/* Hello People , Welcome to this file 
+This is Vending drinking machine code of c++ which will offer you the drinks and ask you to pay and the required amount and 
+the rest you will get once you run this interesting  program .Do run and chek out the offerings.*/
+
+
 //Required header files
 #include<iostream>
 #include<bits/stdc++.h>
