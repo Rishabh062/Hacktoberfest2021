@@ -1,5 +1,11 @@
+/*
+Given two sequences, find the length of longest subsequence present in both of them. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”.
+Time complexity : O(N*M) where N and M are size of strings.
+*/
 #include<bits/stdc++.h>
 using namespace std;
+
+/* Returns length of LCS for X, Y */
 int lcs(string X, string Y, int m, int n )
 {
     if (m == 0 || n == 0)
@@ -9,6 +15,8 @@ int lcs(string X, string Y, int m, int n )
     else
         return max(lcs(X, Y, m, n-1), lcs(X, Y, m-1, n));
 }
+
+/* Driver program to test */
 int main()
 {
     string X = "OCTOBER";
