@@ -1,3 +1,5 @@
+// link to problem:- https://codeforces.com/problemset/problem/1579/B
+
 import java.util.*;
 import java.lang.*;
 
