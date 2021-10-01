@@ -56,7 +56,7 @@ void insertq(int queue[], int item)
     }
     queue[rear] = item;
 }
-//to dispaly the Array 
+//to display the Array 
 void display(int queue[])
 {
     int i;
