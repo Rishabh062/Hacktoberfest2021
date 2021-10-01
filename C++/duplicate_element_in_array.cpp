@@ -1,6 +1,7 @@
 /* Problem Statement: You are given an array of integers 'ARR' containing N elements. Each integer is in the range [1, N-1], 
 with exactly one element repeated in the array.
 Your task is to find the duplicate element.
+Time Complexity: O(nlogn)
 */
 #include<bits/stdc++.h>
 using namespace std;
