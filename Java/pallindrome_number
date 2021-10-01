@@ -1,0 +1,18 @@
+class pallindrome
+{
+  public static void main();
+  int a=2002;
+  int b=a;
+  int rev=0,mod=0;
+  while(b>0)
+  {
+    mod=b%10;
+    rev=(rev*10)+mod;
+    b=b/10;
+  }
+  if(rev==a)
+  System.out.println("PALLINDROME NUMBER");
+  else
+  System.out.println("NOT A PALLINDROME NUMBER");
+
+}
