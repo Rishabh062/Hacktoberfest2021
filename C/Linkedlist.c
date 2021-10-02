@@ -1,11 +1,14 @@
+//Problem: Create a singly linked list and traverse in it.
 #include<stdio.h>
 #include<stdlib.h>
 
+//Create node of linked list
 struct Node {
     int data;
     struct Node* next;
 };
-
+//linked list traversal
+//Complexity: O(n) where n = number of nodes
 void LLTraversal(struct Node* ptr){
     while(ptr!=NULL){
         printf("%d\n", ptr->data);
