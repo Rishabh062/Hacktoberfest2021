@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class ReturnPreviousDate
+{
+    public static void main(String[]args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any date");
+        String date = sc.next();
+        Scanner sc2 = new Scanner(date);
+        sc2.useDelimiter("-");
+        int d = sc2.nextInt();
+        int m = sc2.nextInt();
+        int y = sc2.nextInt();
+        
+        int ar[] = {31,(y%4==0?29:28),31,30,31,30,31,31,30,31,30,31};
+        
+        d--;
+        if(d==0)
+        {
+            if(m==1)
+            {
+                m=12;
+                y--;
+                ar[1]=y%4==0?29:28;
+            }
+            else
+            {
+                m--;
+            }
+            d=ar[m-1];
+        }
+       
+        System.out.println("Previous date : "+d+"-"+m+"-"+y);
+    }
+}
