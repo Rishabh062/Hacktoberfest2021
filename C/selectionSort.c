@@ -1,3 +1,5 @@
+//Problem statement: Selection sort to sort an array
+//Time complexity: O(n*n)
 #include<stdio.h>
 void selectionSort(int *A, int n){
     int indexOfMin, temp;
@@ -20,12 +22,11 @@ void printArray(int* A, int n){
     printf("\n");
 }
 int main(){
-    int A[] = {6, 2, 9, 56, 90, 12};
-    int n = 6;
-    printArray(A, 6);
-    selectionSort(A, 6);
-    printArray(A, 6);
-    int B[] = {1, 2, 3, 4, 5, 6};
-    selectionSort(B, 6);
-    printArray(B, 6);
+    int n;
+    scanf("%d", &n);
+    int b[n];
+    for(int i=0; i<n; i++)
+        scanf("%d", &b[i]);
+    selectionSort(b, n);
+    printArray(b, n);
 }
