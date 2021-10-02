@@ -3,8 +3,7 @@
 using namespace std;
 
 // Returns value of Binomial Coefficient C(n, k)
-unsigned long int binomialCoeff(unsigned int n,
-								unsigned int k)
+unsigned long int binomialCoeff(unsigned int n,unsigned int k)
 {
 	unsigned long int res = 1;
 
