@@ -1,5 +1,7 @@
+//Problem statement: Merge sort for an array
+//Complexity: Time complexity of Merge Sort is  θ(nLogn)
 #include<stdio.h>
-void printArray(int* A, int high){
+void printArray(int* A, int high){ //function to print array
     for(int i=0; i<high; i++){
         printf("%d ", A[i]);
     }
@@ -9,6 +11,7 @@ void merge(int* A, int mid, int low, int high){
     int i, j, k, B[100];
     i=low, j=mid+1;
     k = low;
+    // Merge the B arrays back into A[left..right]
     while(i<=mid && j<=high){
         if(A[i]<A[j]){
             B[k] = A[i];
@@ -19,6 +22,7 @@ void merge(int* A, int mid, int low, int high){
             k++; j++;
         }
     }
+    //Add remaining elements
     while(i<=mid){
         B[k] = A[i];
         k++; i++;
@@ -27,10 +31,14 @@ void merge(int* A, int mid, int low, int high){
         B[k] = A[j];
         k++; j++;
     }
+    //Copying the resulted array to given array
     for(int i=0; i<=high; i++){
         A[i] = B[i];
     }
 }
+// low is for left index and high is
+// right index of the sub-array
+// of A to be sorted
 void mergeSort(int A[], int low, int high){
     int mid;
     if(low<high){
