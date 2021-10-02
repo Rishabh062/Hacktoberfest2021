@@ -5,6 +5,8 @@
  *   File: BalancedParanthesis.java
  */
  
+/* Problem Statement: */
+/* Program to check braces, brackets, and paranthesis are balanced in a given string or not. */
 
 import java.util.Scanner;
 
@@ -38,6 +40,9 @@ public class BalancedParanthesis {
         }
     }
 }
+
+
+/* Stack class */
 
 class Stack {
     char[] characters;
@@ -83,6 +88,8 @@ class Stack {
         return 0;
     }
 }
+
+/* Execution Class*/
 
 class Main {
     public static void main(String[] args) {
