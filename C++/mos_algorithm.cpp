@@ -9,16 +9,22 @@ struct Query{
     }
 };
 
+/*
+Change below 3 functions depending on the implementation
+This is the implementation of findinf the sum of the elements in a range
+*/
+int sum = 0;
+vector<int> a;
 void add(int i) {
-    
+    sum += a[i];
 }
 
 void remove(int i) {
-    
+    sum -= a[i];
 }
 
-void getAnswer() {
-    
+int getAnswer() {
+    return sum;
 }
 
 vector<int> mosAlgorithm(vector<Query> &queries) {
@@ -42,4 +48,20 @@ vector<int> mosAlgorithm(vector<Query> &queries) {
         ans[q.id] = getAnswer();
     }
     return ans;
+}
+
+int main() {
+    int n;cin >> n;//n is the number of elements in the array
+    a.resize(n);
+    for (int i = 0;i < n; ++i) cin >> a[i];
+    int q;cin >> q;//q is the number of queries
+    vector<Query> queries(q);
+    for (int i = 0; i < q; ++i) {
+        cin >> queries[i].l;
+        cin >> queries[i].r;
+        queries[i].id = i;
+    }
+    vector<int> ans = mosAlgorithm(queries);
+    for (int i = 0; i < q; ++i) cout << ans[i] << "\n";//ans[i] is the answer of ith query
+    return 0;
 }
