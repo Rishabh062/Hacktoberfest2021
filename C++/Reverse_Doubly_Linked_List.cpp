@@ -1,3 +1,13 @@
+/*
+
+Problem Statement: Write a C++ code to reverse a double linked list and demonstrate its working by giving an example
+
+Time complexity achieved: O(N) where N is the number of nodes in the initial doubly linked list which is to be reversed.
+
+Explanation for time complexity: We visit each node and swap their next and previous pointers. So, it is accomplished in linar time.
+
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
