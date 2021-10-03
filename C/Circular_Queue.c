@@ -1,3 +1,5 @@
+//Write a program to implement the following operations using a circular queue in an array.
+//1. Insert an element. 2. Delete an element. 3. Display the elements 4. Exit.
 #include <stdio.h>
 #define size 5
 
