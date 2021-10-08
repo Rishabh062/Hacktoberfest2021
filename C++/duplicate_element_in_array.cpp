@@ -5,6 +5,21 @@ Time Complexity: O(nlogn)
 */
 #include<bits/stdc++.h>
 using namespace std;
+
+//using bitwise operator xor
+//x^x = 0
+//0^x = x
+int findRepeating(vector<int> v,int n)          //Time Complexity : O(n) , Space Complexity: O(1)
+{
+    int res = 0;
+    for(int i=0;i<n-1;i++)
+    {
+        res = res^(i+1)^v[i];
+    }
+    res = res^v[n-1];
+    return res;
+}
+
 int main()
 {
     int test;
@@ -22,18 +37,7 @@ int main()
             cin>>temp;
             v.push_back(temp);
         }
-        unordered_map<int,int> mp;
-        for(int i=0;i<n;i++)
-        {
-            mp[v[i]]++;
-        }
-        for(auto itr: mp)
-        {
-            if(itr.second>1)
-            {
-                cout<<"The duplicate element is: "<<itr.first<<endl;
-            }
-        }
+        cout<<"The duplicate element is:"<<findRepeating(v,n);
     }
     return 0;
 }
