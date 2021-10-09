@@ -1,5 +1,5 @@
-quite=True
-while(quite):
+quit=True
+while(quit):
     command=input(">")
     if(command.lower()=="help"):
         print("start - to strat the car")
@@ -10,6 +10,6 @@ while(quite):
     elif(command.lower()=="stop"):
         print("Car stopped")
     elif(command.lower()=='quit'):
-        quite=False
+        quit=False
     else:
         print("I don't understand that...")
