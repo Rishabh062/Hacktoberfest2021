@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrbox {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-row-gap: 10px;
+}
+img {
+  height: 250px;
+  width: 250px;
+  padding: 0.25rem;
+  border: 2px solid #bbff55;
+  border-radius: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+textarea {
+  outline: none;
+  height: 100px;
+  padding: 1rem;
+  border: 2px solid #bbff55;
+  border-radius: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+button {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: #bbff55;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #77ac0d;
+}
