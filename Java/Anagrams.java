@@ -2,13 +2,17 @@ import java.util.*;
 public class Anagrams {
 
 	public static void main(String[] args) {
+		
+		//User input
 		Scanner sc = new Scanner(System.in);
 
 		String a = sc.next();
 		String b = sc.next();
+		//assigning condition
 		boolean isAnagram = false;
 		boolean visited[] = new boolean[b.length()];
 		
+		//comparing length
 		if(a.length() == b.length()) {
 			
 		for(int i = 0; i < a.length(); i++)
@@ -28,6 +32,7 @@ public class Anagrams {
 				break;
 		}
 		} 
+		//printing output
 		if(isAnagram)
 			System.out.println("anagram");
 		else
