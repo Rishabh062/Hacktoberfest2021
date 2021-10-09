@@ -17,6 +17,7 @@ Follow me on **HackerRank** [Click here!](https://www.hackerrank.com/arwazkhan18
 | Loops | Introduction | [Link](https://www.hackerrank.com/challenges/python-loops) |
 | Write a function | Introduction | [Link](https://www.hackerrank.com/challenges/write-a-function) |
 | Print Function | Introduction | [Link](https://www.hackerrank.com/challenges/python-print) |
+| Collections.deque() | Introduction | [Link](https://www.hackerrank.com/challenges/py-collections-deque/problem) |
 | List Comprehensions | Basic Data Types | [Link](https://www.hackerrank.com/challenges/list-comprehensions) |
 | Find the Runner-Up Score! | Basic Data Types | [Link](https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list) |
 | Nested Lists | Basic Data Types | [Link](https://www.hackerrank.com/challenges/nested-list) |
