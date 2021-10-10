@@ -4,7 +4,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 
 detector = cv2.CascadeClassifier(
-    "C:/Users/Prachi Bindal/Downloads/haarcascade_frontalface_default.xml")
+    "haarcascade_frontalface_default.xml")
 
 while True:
 
