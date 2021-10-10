@@ -2,9 +2,10 @@
 Given the integer array candyType of length n, return the maximum number of different 
 types of candies he can eat if he only eats n / 2 of them.
 */
-class Solution {
-public:
-    int distributeCandies(vector<int>& candyType) {
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int distributeCandies(vector<int>& candyType) {
         /*place the array of candies in a set si that only unique candies will be present*/
         unordered_set<int>s(candyType.begin(),candyType.end());
 
@@ -16,7 +17,13 @@ public:
         else
             return n/2;
     }
-};
+int main()
+{
+    vector<int> candyType={5,6,4,5,6,7};
+    cout<<distributeCandies(candyType);
+    return 0;
+}
 
-Time complexity:O(n)
+
+Time complexity :O(n)
 Space complexity:O(n)
