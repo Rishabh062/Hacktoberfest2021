@@ -76,7 +76,7 @@ main_job(2021,8,12,17,00,00,"cats","youremailid","password","clientemailid")
 
 
 
-"""if there is a gmail authentication erron..........
+"""if there is a gmail authentication error..........
 
 
 https: // myaccount.google.com / lesssecureapps?pli = 1 & rapt = AEjHL4NoPGAIuu_It757bkDeFtPrGVtbKB9FnMFUVkkp4Nhhldhmqm4jR0jTujaRMutCqVPZwNRbpbgsddZCDTVmGjxp4Pe2jg
