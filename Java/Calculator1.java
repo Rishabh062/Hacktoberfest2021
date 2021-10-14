@@ -42,21 +42,21 @@ double number1, number2, result;
 int add =0, mul =0, sub =0, div =0;
 
   public Calculator(){
-   frame.setSize(340,440);
+   frame.setSize(440,540);
    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-   frame.setTitle("Simple Calculator ");
+   frame.setTitle("Simple and Effective Calculator ");
 
   //frame.setResizable(false)
 frame.add(panel);
- Border border =BorderFactory.createLineBorder(Color.WHITE,4);
+ Border border =BorderFactory.createLineBorder(Color.WHITE,5);
 panel.add(textarea);
 textarea.setBackground(Color.BLACK);
-Border tborder = BorderFactory.createLineBorder(Color.BLUE,3);
-Font font = new Font("Times New Roman", Font.BOLD,33);
+Border tborder = BorderFactory.createLineBorder(Color.BLUE,4);
+Font font = new Font("Times New Roman", Font.BOLD,43);
 textarea.setFont(font);
 textarea.setForeground(Color.WHITE);
 
-textarea.setPreferredSize(new Dimension(2,10));
+textarea.setPreferredSize(new Dimension(3,10));
 textarea.setLineWrap(true);
 }
 }
