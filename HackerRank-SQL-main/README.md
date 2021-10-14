@@ -30,7 +30,8 @@ Follow me on **HackerRank** [Click here!](https://www.hackerrank.com/arwazkhan18
 | 19 | Employee Names | Basic Select | [Link](https://www.hackerrank.com/challenges/name-of-employees/problem) |
 | 20 | Employee Salaries  | Basic Select | [Link](https://www.hackerrank.com/challenges/salary-of-employees/problem) |
 | 21 | Type of Triangle  | Advanced Select | [Link](https://www.hackerrank.com/challenges/what-type-of-triangle/problem) |
-
+| 22 | Binary Tree Nodes  | Advanced Select | [Link](https://www.hackerrank.com/challenges/binary-search-tree-1/problem) |
+| 23 | The PADS  | Advanced Select | [Link](https://www.hackerrank.com/challenges/the-pads/problem) |
 ---
 
 # Useful material to solve queries
