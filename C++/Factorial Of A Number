@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int fact(unsigned int);
+
+int main() {
+    int n, result;
+
+    cout << "Enter a non-negative number: ";
+    cin >> n;
+
+    result = fact(n);
+    cout << "Factorial of"<<" " << n << " = " << result;
+    return 0;
+}
+
+int fact(unsigned int n) {
+    if (n > 1)
+    {
+        return n * fact(n - 1);
+    }
+     else
+    {
+        return 1;
+    }
+}
