@@ -1,0 +1,21 @@
+    int maxConsecutiveOnes(vector<int>& nums) {
+        int maxCnt = 0;
+        int maxSoFar = 0;
+        
+        for(int i = 0; i < nums.size();i++){
+            if(nums[i] == 1){
+                maxSoFar++;
+                
+            }else{
+                if(maxSoFar > maxCnt) maxCnt = maxSoFar;
+                maxSoFar = 0;
+            }
+            
+            if(maxSoFar > maxCnt){
+                maxCnt = maxSoFar;
+            }
+        }
+        
+        return maxCnt;
+        
+    }
