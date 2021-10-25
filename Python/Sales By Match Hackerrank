@@ -1,0 +1,9 @@
+n = int(input())
+l = list(map(int, input().split()))
+a = [0]*101
+c = 0
+for i in l:
+    a[i] += 1
+for i in a:
+    c += i//2
+print(c)
