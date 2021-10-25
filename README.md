@@ -44,4 +44,4 @@ for example hello.py`
 ### Subscribe to "**talkwithrd**" for more updates about *Hacktoberfest 2021*.
 #### [talkwithrd](https://www.youtube.com/channel/UCV_vCNcrCRY6S9a7-gdwYNA)
 
-## Keep smiling and keep coding 🥳
+## Keep smiling and keep coding 🥳 thankyou 
