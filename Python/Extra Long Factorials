@@ -1,0 +1,23 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the extraLongFactorials function below.
+def eLF(n):
+    if n == 0:
+        return 1
+    else:
+        fact = n * eLF(n-1)
+        return fact
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    e = eLF(n)
+
+    print(e)
