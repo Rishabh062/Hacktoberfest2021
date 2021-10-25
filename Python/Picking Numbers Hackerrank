@@ -1,0 +1,13 @@
+n = int(input())
+a = list(map(int, input().split()))
+l = [0]*101
+for i in a:
+    l[i] += 1
+maximum = 0
+c = 0
+for i in range(1, 101):
+    c = l[i] + l[i-1]
+    if c > maximum:
+        maximum = c
+print(maximum)        
+        
