@@ -19,6 +19,23 @@
          foreach( $numbers as $value ) {
             echo "Value is $value <br />";
          }
+      
+      
+      
+      
+      /*Check if the key "test1" exists in an array:*/
+      $a=array("test1"=>"val1","test2"=>"val2");
+      if (array_key_exists("test1",$a))
+        {
+        echo "Key exists!";
+        }
+      else
+        {
+        echo "Key does not exist!";
+        }
+      
+      
+      
       ?>
       
    </body>

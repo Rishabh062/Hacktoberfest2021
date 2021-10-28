@@ -1,5 +1,7 @@
-# Hacktoberfest2021
+# Hacktoberfest2021 (Excluded) 
 ## Hey 👋 everyone , *hacktoberfest* is back with biggest beginners friendly opensource event. Event will start from 1st of October and will remain upto 31st October 2021.
+
+### Due to lot of spam pull request our repository got excluded from *Hacktoberfest 2021* but you can still contribute here by sending relevent PR.
 
 
 ### What you need to do in this event?
@@ -16,9 +18,13 @@
 
 **4) Add valid program (or code) on that sub repository.**
 
-**5) Commit the change and generate a valid pull request.**
+**5) Don't forget to add the problem statement , comments and complexity.⚠️⚠️ It's a must part.**
 
-**6) After carefully reviewing your code , if it is valid then it will be merged otherwise discarded.**
+**6) Commit the change and generate a valid pull request.**
+
+**7) After carefully reviewing your code , if it is valid then it will be merged otherwise discarded.**
+
+### ⚠️⚠️ NOTE: Similar type of code(or program) will not be accepted. So kindly see the codes first and if you want to improve it then you can do that as well. That's also a kind of contribution and on that basis you will learn a lot.
 
 ### Various programming language in which you can contribute.
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />   
