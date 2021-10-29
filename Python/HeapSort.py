@@ -1,5 +1,5 @@
 def heapify(array, a, b):
-	largest = b 
+	largest = b #Intialize largest
 	l = 2 * b + 1
 	root = 2 * b + 2	 
 

@@ -7,5 +7,6 @@ for i in range(len(A)):
    #swap
 A[i], A[min_] = A[min_], A[i]
 # main
+print ( "Sorted array" )
 for i in range(len(A)):
    print(A[i])
