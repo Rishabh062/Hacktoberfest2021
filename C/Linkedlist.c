@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//Create node of linked list
+//Create node of linked list, A node has two field one is data & second is link. Each node contain reference(link) of next node. 
 struct Node {
     int data;
     struct Node* next;
@@ -15,7 +15,9 @@ void LLTraversal(struct Node* ptr){
         ptr = ptr->next;
     }
 }
-int main()
+
+//Execution of each program start from main function.
+int main(void)
 {
     struct Node* head;
     struct Node* second;
