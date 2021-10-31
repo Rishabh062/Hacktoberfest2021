@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+int getmax(int x,int y);
+int lcs(char *x,char *y,int m,int n);
+int main()
+{
+	char x[5]="abcd";
+	char y[5]="acbc";
+	int z=lcs(x,y,strlen(x),strlen(y));
+	cout<<"Length of subsequence "<<z<<endl;
+	return(0);
+}
+int lcs(char *x, char *y,int m,int n)
+{
+	if(m==0 || n==0)
+		return(0);
+
+	if(x[m-1]==y[n-1])
+		return(1+lcs(x,y,m-1,n-1));
+
+	else
+		return(getmax(lcs(x,y,m,n-1),lcs(x,y,m-1,n)));
+}
+
+int getmax(int x,int y)
+{
+	if(x>y)
+		return(x);
+	else
+		return(y);
+}
+
