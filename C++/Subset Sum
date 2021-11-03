@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+int subset(int arr[],int n, int sum);
+int main()
+{
+	int arr[]={3,2,7,1};
+	int x;
+	x=subset(arr,4,6);
+	if(x==1)
+		printf("sum is possible");
+	if(x==0)
+		printf("sum is not possible");
+	return(0);
+}
+
+int subset(int *arr,int n,int sum)
+{
+	int subsetsum[n+1][sum+1],i,j;
+	for(i=0;i<=n;i++)
+		subsetsum[i][0]=1;
+	for(i=1;i<=sum;i++)
+		subsetsum[0][i]=0;
+	for(i=1;i<=n;i++)
+	{
+		fsor(j=1;j<=sum;j++)
+		{
+			if(j<arr[i-1])
+				subsetsum[i][j]=subsetsum[i-1][j];
+			if(j>=arr[i-1])
+				subsetsum[i][j]=subsetsum[i-1][j] || subsetsum[i-1][j-arr[i-1]];
+		}
+	}
+	return(subsetsum[n][sum]);
+}
+
