@@ -1,0 +1,19 @@
+int equilibriumPoint(long long arr[], int n) {
+     int pre_sum = 0;
+     for (int i=0; i<n; i++)
+     {
+     pre_sum+=arr[i];
+     }
+     
+     int l_sum = 0;
+    for(int i=0; i<n; i++)
+    {
+        if(l_sum == pre_sum-arr[i])
+        return (i+1);
+        l_sum = l_sum + arr[i];
+        pre_sum = pre_sum-arr[i];
+    }
+        return -1;
+    }
+Footer
+© 2022 GitHub, Inc.
