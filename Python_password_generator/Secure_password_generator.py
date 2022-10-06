@@ -9,9 +9,9 @@ root =Tk()
 root.geometry("400x400") #size of the window by default
  
 #title of our window
-root.title("Random Password Generator")
+root.title("Secure Password Generator")
  
-# -------------------  Random Password generator functio
+# Secure Password generator function
  
 output_pass = StringVar()
  
@@ -20,22 +20,22 @@ all_combi = [string.punctuation, string.ascii_uppercase, string.digits, string.a
 def randPassGen():
     password = "" # to store password
     for y in range(pass_len.get()):
-        char_type = random.choice(all_combi)   #to randomize the occurance of alphabet, digit or symbol
+        char_type = random.choice(all_combi)   #to randomize the occurance of alphabets, digits and symbols
         password = password + random.choice(char_type)
      
     output_pass.set(password)
  
-# ----------- Copy to clipboard function
+# Copy to clipboard function
  
 def copyPass():
     pyperclip.copy(output_pass.get())
  
-#-----------------------Front-end Designing (GUI)
+#Front-end Designing (GUI)
  
 pass_head = Label(root, text = 'Password Length', font = 'arial 12 bold').pack(pady=10) #to generate label heading
  
 pass_len = IntVar() #integer variable to store the input of length of the password wanted
-length = Spinbox(root, from_ = 4, to_ = 32 , textvariable = pass_len , width = 24, font='arial 16').pack()
+length = Spinbox(root, from_ = 1, to_ = 32 , textvariable = pass_len , width = 24, font='arial 16').pack()
  
 #Generate password button
  
