@@ -1,5 +1,6 @@
+*************************************************************SECURE RANDOM PASSWORD********************************************************************************************
 import random, string
-from tkinter import *
+from tkinter import *  #Tkinter
 import pyperclip
  
  
