@@ -56,4 +56,4 @@ public:
         leftPrev->next = prev;
         return newnode->next;
     }
-};
+}
