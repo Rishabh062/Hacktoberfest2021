@@ -1,0 +1,66 @@
+"""
+Random_Number_Game
+
+Description:
+"""
+ans = input("Get another person, when you are ready, say yes. ")
+if ans == "yes":
+    print("Take turns guessing.")
+    import random
+    my_number = random.randint(100, 1000)
+    
+    print("The number is between 100 - 1000.")
+    user_number = input("guess my number: ")
+    user_number = int(user_number)
+#chooses a random number
+    
+    if user_number < 100:
+        user_number = 100
+    if user_number > 1000:
+        user_number = 1000
+#changes the users input if it is outside of the range
+    ans2 = input("was your guess " + str(user_number) + ", yes or no. ")
+    if ans2 == "yes":
+        if user_number > int(my_number):
+            print("Your number was too high.")
+            print("Other persons turn.")
+            print()
+        if user_number < int(my_number):
+            print("Your number was too low.")
+            print("Other persons turn.")
+            print()
+        if user_number == int(my_number):
+            print("Correct.")
+            print("You are the best! You guessed it in one try!")
+            print("Please play again later.")
+            print("By the way, the number will not be the same.")
+    if ans2 == "no":
+        print("Sorry about that.")
+        
+    while int(user_number) != int(my_number):
+        user_number = input("guess my number: ")
+        user_number = int(user_number)
+        
+        if user_number < 100:
+            user_number = 100
+        if user_number > 1000:
+            user_number = 1000
+            
+        ans3 = input("was your guess " + str(user_number) + ", yes or no. ")
+        if ans3 == "yes":
+            if user_number > int(my_number):
+                print("Your number was too high.")
+                print("Other persons turn.")
+                print()
+            if user_number < int(my_number):
+                print("Your number was too low.")
+                print("Other persons turn.")
+                print()
+            if user_number == int(my_number):
+                print("Correct.")
+                print("Nice job!")
+                print("Please play again later.")
+                print("By the way, the number will not be the same.")
+        if ans3 == "no":
+            print("Sorry about that.")
+#chooses to say different things depending on the input to the output
