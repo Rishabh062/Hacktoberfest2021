@@ -1,0 +1,43 @@
+//Question: https://www.codechef.com/START60C/problems/ARRPAL
+//code:
+#include <bits/stdc++.h> 
+using namespace std;
+#define test int t;cin>>t;\
+    while(t--)
+#define arr_input int n;cin>>n;vector<int> arr(n);\
+    for(int i=0;i<n;i++)cin>>arr[i];
+#define ll long long
+#define fo(i,e) for(ll i = 0; i < e; i++)
+
+
+int main(){
+    test{
+        arr_input
+        if(n==1){
+            cout<<0<<endl;
+            continue;
+        }
+        int flag=0;
+        int count=arr[n-1]-arr[0];
+        // vector<int> vec;
+        for(int i=1,j=n-2;i<j;i++,j--){
+            if(arr[j]-arr[i]<0 || arr[j]-arr[i]>count){
+                flag=1;break;
+
+            }
+            count=arr[j]-arr[i];
+        }
+        // fo(i,vec.size()-1){
+        //     if(vec[i]-vec[i+1]<=0 || vec[i]>count){
+        //         flag=1;
+        //         break;
+        //     }
+        // }
+        count=arr[n-1]-arr[0];
+        if(!flag)
+            cout<<count<<endl;
+        else
+            cout<<-1<<endl;
+    }
+    return 0;
+}
