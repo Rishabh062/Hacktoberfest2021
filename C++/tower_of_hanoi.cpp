@@ -1,24 +1,27 @@
-//      TOWER OF HANOI (RECURSION)
-
 #include<iostream>
+#include<conio.h>
 using namespace std;
-
-void towerOfHanoi(int n, char A, char B, char C)
+void TOH(int d, char t1, char t2, char t3)
 {
-    if(n==1)
-    {
-        cout<<"Move 1 from " << A <<" to " << C <<endl;
-        return;
-    }
-    towerOfHanoi(n-1, A, C, B);
-    cout<<"Move "<<n<<" from "<<A<<" to "<<C<<endl;
-    towerOfHanoi(n-1, B, A, C);
+if(d==1)
+{
+cout<<"\nShift top disk from tower "<<t1<<" to tower "<<t2;
+return;
 }
-
+TOH(d-1,t1,t3,t2);
+cout<<"\nShift top disk from tower "<<t1<<" to tower "<<t2;
+TOH(d-1,t3,t2,t1);
+}
 int main()
 {
-    int n=3;
-    char A='A', B='B', C='C';
-    towerOfHanoi(n,A,B,C);
-    return 0;
+int disk;
+cout<<"Enter the number of disks: "; cin>>disk;
+if(disk<1)
+cout<<"There are no disks to shift";
+else
+cout<<"There are "<<disk<<" disks in tower 1\n";
+TOH(disk, '1','2','3');
+cout<<"\n\n"<<disk<<" disks in tower 1 are shifted to tower 2";
+getch();
+return 0;
 }
