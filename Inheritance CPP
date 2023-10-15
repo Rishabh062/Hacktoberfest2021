@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+class employee
+{
+    private:
+    int eid;
+    string name;
+
+    public:
+
+    employee(int id,string n)
+    {
+        eid=id;
+        name=n;
+    }
+
+    int getid()
+    {
+        return eid;
+    }
+
+    string getname()
+    {
+        return name;
+    }
+};
+
+class fulltimeemployee: public employee
+{
+    private:
+    int salary;
+
+    public:
+    fulltimeemployee(int id,string n,int sal):employee(id,n)
+    {
+        salary=sal;
+    }
+
+    int getsalary()
+    {
+        return salary;
+    }
+};
+
+class parttimeemployee: public employee
+{
+    private:
+    int wages;
+
+    public:
+    parttimeemployee(int id,string n,int w): employee(id,n)
+    {
+        wages=w;
+    }
+
+    int getwages()
+    {
+        return wages;
+    }
+};
+
+int main()
+{
+    fulltimeemployee p1(1,"umesh",100000);
+    parttimeemployee p2(2,"Navya",100000);
+
+
+    cout<<"Salary of"<<p1.getname()<<" is "<<p1.getsalary()<<endl;
+    cout<<"Daily wage of "<<p2.getname()<<" is "<<p2.getwages()<<endl;
+}
