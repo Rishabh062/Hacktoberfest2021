@@ -11,7 +11,7 @@ struct Node {
 //Complexity: O(n) where n = number of nodes
 void LLTraversal(struct Node* ptr){
     while(ptr!=NULL){
-        printf("%d\n", ptr->data);
+        printf("%d ", ptr->data);
         ptr = ptr->next;
     }
 }
@@ -26,16 +26,24 @@ int main()
     third = (struct Node*)malloc(sizeof(struct Node));
     fourth = (struct Node*)malloc(sizeof(struct Node));
 
-    head->data = 7;
+    printf("Enter the first node's value: ");
+    scanf("%d",&head->data);
+    //head->data = 7;
     head->next = second;
 
-    second->data = 11;
+    printf("Enter the second node's value: ");
+    scanf("%d",&second->data);
+    //second->data = 11;
     second->next = third;
 
-    third->data = 66;
+    printf("Enter the third node's value: ");
+    scanf("%d",&third->data);
+    //third->data = 66;
     third->next = fourth;
 
-    fourth->data = 2;
+    printf("Enter the fourth node's value: ");
+    scanf("%d",&fourth->data);
+    //fourth->data = 2;
     fourth->next = NULL;
 
     LLTraversal(head);
