@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	 integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<style type="text/css">
+
+		@import url('https://fonts.googleapis.com/css2?family=David+Libre&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=David+Libre&display=swap');
+		/*@import url('https://fonts.googleapis.com/css2?family=Caveat&family=David+Libre&display=swap');*/
+
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+
+		body{
+			background-image:url("bgimg.jpg");
+			background-size:cover;
+			background-attachment:fixed;
+			height:100vh;
+			position:relative;
+		}
+
+	/*	body::before{
+			content: '';
+			position:absolute;
+			 background-color: rgba(0,0,0,0.1);
+		}*/
+		nav{
+			width:100%;
+			/*background-color:white;*/
+		}
+
+		.containers{
+			/*margin:0 auto;*/
+			/*background-image:url("https://1.bp.blogspot.com/-UAaZ8-94CVo/UQW4ioAlzSI/AAAAAAAAAuk/Y0jz2zydXhE/s1600/Harry_Potter_logo.jpg");*/
+	/*background-image:url("https://p.kindpng.com/picc/s/206-2069146_download-free-png-harry-potter-logo-harry-potter.png");*/
+			height:15vh;
+			width:100%;
+			/*background-size:100%;
+			background-position:center top;
+			background-repeat:no-repeat;
+			display:flex;
+			justify-content:center;*/
+			text-align:center;
+
+		}
+
+
+
+
+		.heading-bar{
+			/*display:flex;*/
+			/*align-items:center;*/
+
+			/*justify-content:center;*/
+		}
+
+
+
+
+
+
+
+
+
+		.heading{
+			color:white;
+			font-family: 'David Libre', serif;
+			width:100%;
+			font-size:2.5rem;
+			letter-spacing:10px;
+			text-decoration:underline;
+		}
+
+		.section2{
+
+			width:80%;
+			margin:100px auto;
+			/*width:100%;*/
+			/*height:350px;*/
+			/*background:#626567 ;*/
+			background-image:url("box.png");
+			background-repeat:repeat-x;
+			background-size:cover;
+			border:2px solid black;
+			box-shadow:2px 6px 10px 0;
+			display:flex;
+			/*align-items:center;*/
+			/*justify-content:center;*/
+			/*height:100vh;*/
+
+
+
+		}
+
+		.box{
+			width:100%;
+			height:400px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			flex-direction:column;
+		}
+/*
+		section{
+			width:80%;
+			margin:40px auto;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+
+		}*/
+
+		.btn{
+			padding:5px 14px;
+			border-radius:25px;
+			transition:0.3s ease-in;
+			margin-top:20px;
+			background-color:grey;
+			color:white;
+		}
+
+		.text{
+			border:none;
+			border-radius:100px;
+			display:none;
+		}
+		p{
+			font-weight:bold;
+		}
+
+		.show{
+			display:none;
+			padding:5px 12px;
+			/*border-radius:25px;*/
+			outline:none;
+			transition:0.3s linear;
+			margin-top:15px;
+			background-color:black;
+			color:white;
+		}
+
+		.hint{
+			font-family: 'David Libre', serif;
+			font-size:20px;
+			color:black;
+		}
+		.skip{
+			display:none;
+			outline:none;
+			margin-top:15px;
+			padding:5px 10px;
+			transition:0.2s linear;
+			background-color:black;
+			color:white;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+<nav>
+<div class="containers">
+	<div class="heading-bar">
+		<h1 class="heading">HARRY POTTER</h1>
+		<h2 class="heading">GUESS THE WORDS GAME</h2>
+	</div>
+</div>
+</nav>
+
+<!-- <section> -->
+<div class="section2">
+	<div class="box">
+		<p class="hint"></p>
+		<p class="msg"></p>
+		<input type="text" class="text">
+		<button class="btn">Click here to start</button>
+		<button class="skip">Repeated Question? SKIP </button>
+		<button class="show">STUCK ? SHOW ANSWER</button>
+
+	</div>
+</div>
+
+<!-- </section> -->
+
+
+
+<script type="text/javascript">
+
+
+const msg = document.querySelector('.msg');
+const guess= document.querySelector('input');
+const btn= document.querySelector('.btn');
+const hint=document.querySelector('.hint');
+const show=document.querySelector('.show');
+const skip=document.querySelector('.skip');
+
+let play=false;
+let newWords= "";
+let randWords="";
+let sWords = ['dobby','dumbledore','tomriddle','hagrid','slytherin','voldemort','siriusblack','spiders',
+'fang','ginny','keeper','scotland'];
+
+const createNewWords = function(){
+	let randNum = Math.floor(Math.random() * sWords.length);
+	// console.log(randNum);
+	let newTempSwords = sWords[randNum];
+	 return newTempSwords;
+}
+
+const scrambleWords = function(arr){
+	for(let i = arr.length-1; i>0; i--){  							
+		let temp = arr[i];
+		console.log(temp);					
+		let j = Math.floor(Math.random()*(i+1));				
+		console.log(i);
+		console.log(j);
+
+		arr[i] = arr[j];
+		arr[j] = temp;
+
+	}
+	return arr;
+}
+
+skip.addEventListener('click', ()=>{
+	
+		// btn.innerHTML="Guess";
+										// skip.style.display="block";
+		// guess.classList.toggle('text');
+
+		newWords = createNewWords();
+		randWords = scrambleWords(newWords.split("")).join("");
+		// console.log(randWords.join(""));
+
+		msg.innerHTML = `Unscramble The Answer:- ${randWords}`;
+
+				
+ 		hintQuestions();
+
+
+})
+
+
+btn.addEventListener("click",function(){
+	if(!play){
+		play=true;
+		btn.innerHTML="Guess";
+										skip.style.display="block";
+		guess.classList.toggle('text');
+
+		newWords = createNewWords();
+		randWords = scrambleWords(newWords.split("")).join("");
+		// console.log(randWords.join(""));
+
+		msg.innerHTML = `Unscramble The Answer:- ${randWords}`;
+
+				
+ 		hintQuestions();
+
+
+
+
+
+
+		
+
+	} else{
+		let tempWord = guess.value;
+		if(tempWord===newWords){
+			// console.log("sahi");
+			play=false;
+			msg.innerHTML = `CORRECT!, IT IS ${newWords}`;
+			btn.innerHTML="Next";
+			guess.classList.toggle('text');
+			guess.value="";
+			show.style.display="none";
+			skip.style.display="none";
+		}else{
+			// console.log("galat");
+			msg.innerHTML=`ITS INCORRECT. TRY AGAIN -- ${randWords}`;
+			show.style.display="block";
+			show.innerHTML='STUCK ? SHOW ANSWER';
+
+			show.addEventListener("click", ()=>{
+
+				// let a = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? ');
+				
+				if(newWords===sWords[0]){
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let a = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? ');
+					
+					show.innerHTML='dobby';
+					guess.value="dobby";
+					
+				}
+				else if(newWords===sWords[1]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='dumbledore';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let b = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? ');
+					
+					show.innerHTML='dumbledore';
+					guess.value="dumbledore";
+					
+				}
+
+				else if(newWords===sWords[2]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='tomriddle';
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let c = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+					
+					show.innerHTML='tomriddle';
+					guess.value="tomriddle";
+					
+				}
+
+				else if(newWords===sWords[3]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='hagrid';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let d = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+				
+					show.innerHTML='hagrid';
+					guess.value="hagrid";
+					
+				}
+
+				else if(newWords===sWords[4]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='slytherin';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let e = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+				
+					show.innerHTML='slytherin';
+					guess.value="slytherin";
+					
+				}
+
+				else if(newWords===sWords[5]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='voldemort';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let f = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+					
+					show.innerHTML='voldemort';
+					guess.value="voldemort";
+					
+				}
+
+				else if(newWords===sWords[6]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='siriusblack';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let g = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+					
+					show.innerHTML='siriusblack';
+					guess.value="siriusblack";
+					
+				}
+
+				else if(newWords===sWords[7]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='spiders';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let h = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+					if(a===true){
+					show.innerHTML='spiders';
+					guess.value="spiders";
+					}
+				}
+
+				else if(newWords===sWords[8]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='fang';
+
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let i = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? ');
+					
+					show.innerHTML='fang';
+					guess.value="fang";
+					
+				}
+
+				else if(newWords===sWords[9]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='ginny';
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let j = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? ');
+					
+					show.innerHTML='ginny';
+					guess.value="ginny";
+					
+				}
+
+				else if(newWords===sWords[10]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='keeper';
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let k = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER?');
+					
+					show.innerHTML='keeper';
+					guess.value="keeper";
+					
+				}
+
+				else if(newWords===sWords[11]){
+					// confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? IF YES, CLICK AGAIN');
+					// show.innerHTML='ginny';
+					// show.innerHTML='STUCK ? SHOW ANSWER';
+					// let j = confirm('ARE YOU SURE YOU WANT TO SEE THE ANSWER? ');
+					
+					show.innerHTML='scotland';
+					guess.value="scotland";
+					
+				}
+			})
+		}
+	}
+})
+
+
+
+function hintQuestions(){
+	if(newWords===sWords[0]){
+			hint.innerHTML='HINT:Who has been stealing Harry’s letters from Ron and Hermione at the beginning of ‘Harry Potter and the Chamber of Secrets’? ';
+			console.log("dobby");
+			
+		}
+		else if(newWords===sWords[1]){
+			hint.innerHTML='HINT: Who has given Harry Potter the Invisibility cloak?';
+			console.log("dumbledore");
+		}
+
+		else if(newWords===sWords[2]){
+			hint.innerHTML='HINT: The actual name of Lord Voldemort is ';
+			console.log("tomriddle");
+		}
+
+
+		else if(newWords===sWords[3]){
+			hint.innerHTML='HINT: Who brought Harry to Hogwarts when he was matured to go there?';
+			console.log("hagrid");
+		}
+
+
+		else if(newWords===sWords[4]){
+			hint.innerHTML='HINT:In his first quidditch match, Harry’s team was against which House';
+			console.log("slytherin");
+		}
+
+	
+
+
+
+		else if(newWords===sWords[5]){
+			hint.innerHTML='HINT: Man behind the scar of harry potter';
+			console.log("voldemort");
+		}
+
+		else if(newWords===sWords[6]){
+			hint.innerHTML="HINT: Who is Harry Potter's godfather?";
+			console.log("siriusblack");
+		}
+
+		else if(newWords===sWords[7]){
+			hint.innerHTML='HINT: Which type of insect is Ronald Weasley most afraid of?';
+			console.log("spiders");
+		}
+
+
+		else if(newWords===sWords[8]){
+			hint.innerHTML='HINT: What is the name of Hagrid’s big dog?';
+			console.log("fang");
+		}
+
+
+
+		else if(newWords===sWords[9]){
+			hint.innerHTML="HINT: What is the first name of Harry Potter's wife?";
+			console.log("ginny");
+		}
+
+
+
+
+
+		else if(newWords===sWords[10]){
+			hint.innerHTML='HINT:What do you call the person who defends the goal post in Quidditch?';
+			console.log("keeper");
+		}
+
+		else if(newWords===sWords[11]){
+			hint.innerHTML='HINT:What part of the United Kingdom is Hogwarts School located in?';
+			console.log("scotland");
+		}
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
