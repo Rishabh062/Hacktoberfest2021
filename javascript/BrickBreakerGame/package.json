@@ -1,0 +1,33 @@
+{
+  "name": "brickbreaker",
+  "version": "1.0.0",
+  "description": "JavaScript example starter project",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": [
+    "javascript",
+    "starter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulAziz0682/BrickBreaker.git"
+  },
+  "author": "Abdul Aziz Khoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdulAziz0682/BrickBreaker/issues"
+  },
+  "homepage": "https://github.com/AbdulAziz0682/BrickBreaker#readme"
+}
