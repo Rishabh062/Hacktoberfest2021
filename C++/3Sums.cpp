@@ -66,7 +66,7 @@ vector<vector<int>> threeSum(vector<int> &nums)
     return ans;
 }
 
-int main()
+void main()
 {
     vector<int> vect;
     int a, n;
