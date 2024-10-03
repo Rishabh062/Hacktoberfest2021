@@ -1,5 +1,8 @@
 # Hacktoberfest2021 (Excluded) 
+## Hey 👋 everyone, please don't add PR here, this repo is old and is depricated
+
 ## Hey 👋 everyone , *hacktoberfest* is back with biggest beginners friendly opensource event. Event will start from 1st of October and will remain upto 31st October 2021.
+
 
 ### Due to lot of spam pull request our repository got excluded from *Hacktoberfest 2021* but you can still contribute here by sending relevent PR.
 
