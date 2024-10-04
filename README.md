@@ -48,3 +48,5 @@ for example hello.py`
 #### [talkwithrd](https://www.youtube.com/channel/UCV_vCNcrCRY6S9a7-gdwYNA)
 
 ## Keep smiling and keep coding 🥳
+## First step in the new world of programming
+
