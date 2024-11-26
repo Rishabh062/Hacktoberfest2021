@@ -1,0 +1,82 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int array[100], c, arrayLength,i,j,gcd,g,k,l,fi;
+
+int findValue(int toSearch){
+
+    int found = 0;
+
+    for( fi=0; fi<arrayLength; fi++)
+    {
+
+        if(array[fi] == toSearch)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+
+    if(found==0){
+        printf("\n======================");
+        printf("\nThis is not a Lattice");
+        printf("\n======================");
+        _Exit(0);
+    }
+
+    return 0;
+}
+
+void checkLattice(){
+    printf("\nChecking lattice...");
+    //check GLU and LUB
+    for ( i = 0; i < arrayLength; i++){
+        for ( j = 0; j < arrayLength; j++){
+
+            //find GCD
+            int n1=array[i];
+            int n2=array[j];
+            for(g=1; g <= n1 && g <= n2; ++g)
+            {
+                // Checks if g is factor of both integers
+                if(n1%g==0 && n2%g==0){
+
+                    gcd = g;
+
+                }
+            }
+            int lcm = ((n1*n2)/gcd);
+            printf("\nn1 = %d, n2 = %d, GCD = %d, LCM = %d",n1,n2,gcd,lcm);
+            int a = findValue(gcd);
+            int b = findValue(lcm);
+        }
+    }
+
+    printf("\n======================");
+    printf("\nThis is a Lattice");
+    printf("\n======================");
+}
+
+int main()
+{
+
+    printf("Enter number of elements in array\n");
+    scanf("%d", &arrayLength);
+
+    printf("Enter %d elements\n", arrayLength);
+
+    for (c = 0; c < arrayLength; c++){
+        scanf("%d", &array[c]);
+    }
+
+    printf("Entered array is\n");
+
+    for (c = 0; c < arrayLength; c++){
+        printf("%d, ", array[c]);
+    }
+
+    checkLattice();
+
+    return 0;
+}
