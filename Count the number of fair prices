@@ -1,0 +1,18 @@
+A  VERY NICE implementation of BINARY SEARCH TO BE LEARNT HERE
+
+class Solution {
+public:
+    long long countFairPairs(vector<int>& nums, int lower, int upper) {
+        long long int ans = 0;
+        sort(nums.begin(),nums.end());
+        for(int i=0;i<nums.size()-1;i++){
+            long long int l = lower-nums[i];
+            long long int h = upper-nums[i];
+            long long int l_b = lower_bound(nums.begin()+i+1,nums.end(),l)-nums.begin();
+            long long int u_b = upper_bound(nums.begin()+i+1,nums.end(),h)-nums.begin();
+
+            ans += (u_b - l_b);
+        }
+        return ans;
+    }
+};
