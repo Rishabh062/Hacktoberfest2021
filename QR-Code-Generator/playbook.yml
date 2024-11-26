@@ -1,0 +1,19 @@
+---
+- name: Deploy qrimage
+  hosts: all
+  tasks:
+    - name: Stop and remove existing container  
+      shell:
+        cmd: docker stop qwertyq && docker rm qwertyq || true
+  
+    - name: Removing existing image
+      shell: 
+        cmd:  docker rmi qrimage || true
+
+    - name: Pull docker Image
+      shell:
+        cmd: docker pull rachit98/qrimage
+
+    - name: Run Docker Image
+      shell:
+        cmd: docker run -d -it -p 80:80 --name qwertyq rachit98/qrimage
