@@ -7,7 +7,7 @@ public class Anagrams {
 		String a = sc.next();
 		String b = sc.next();
 		boolean isAnagram = false;
-		boolean visited[] = new boolean[b.length()];
+		boolean visited[] = new boolean[b.length()]; // Hello World!
 		
 		if(a.length() == b.length()) {
 			
