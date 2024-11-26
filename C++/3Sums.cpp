@@ -66,7 +66,7 @@ vector<vector<int>> threeSum(vector<int> &nums)
     return ans;
 }
 
-int main()
+int main(void)      //Execution of every program start form main() function.
 {
     vector<int> vect;
     int a, n;

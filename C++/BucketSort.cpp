@@ -21,15 +21,15 @@ void bucketSort(float arr[], int n)
 			arr[index++] = b[i][j];
 }
 
-int main()
+int main(void)
 {
 	float arr[]
 		= { 0.897, 0.565, 0.656, 0.234, 0.665, 0.484 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 	bucketSort(arr, n);
 
-	cout << "Sorted array is \n";
-	for (int i = 0; i < n; i++)
-		cout << arr[i] << " ";
+	cout << " <<< Sorted array is >>> \n";
+	for (int i = 0; i < n; i++) 
+		cout << arr[i] << " "; // it will display the output of sorted array.
 	return 0;
 }
