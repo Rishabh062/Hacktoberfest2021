@@ -1,50 +1,87 @@
-# Hacktoberfest2021 (Excluded) 
-## Hey 👋 everyone, please don't add PR here, this repo is old and is depricated
+# 🎉 Hacktoberfest 2021 – Beginner Friendly Open Source Contributions
 
-## Hey 👋 everyone , *hacktoberfest* is back with biggest beginners friendly opensource event. Event will start from 1st of October and will remain upto 31st October 2021.
+[![GitHub Issues](https://img.shields.io/github/issues/Rishabh062/Hacktoberfest2021)](../../issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Rishabh062/Hacktoberfest2021)](../../pulls)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+Welcome to **Hacktoberfest 2021**. This repository exists to help beginners make their very first open-source contributions. You can add your programs, algorithms, or small projects in any programming language.
+
+Make 4 valid PRs this October and celebrate coding while earning swag 🎁
+
+---
+
+## 📌 Table of Contents
+
+1. [What is Hacktoberfest?](#-what-is-hacktoberfest)
+2. [How to Contribute](#-how-to-contribute)
+3. [Rules](#-rules)
+4. [Folder Structure](#-folder-structure)
+5. [How to Make a Pull Request](#-how-to-make-a-pull-request)
+6. [Good First Issues](#-good-first-issues)
+7. [Community & Conduct](#-community--conduct)
+8. [License](#-license)
+
+---
+
+## ❓ What is Hacktoberfest?
+
+Hacktoberfest is an annual open-source event supported by GitHub and DigitalOcean.
+
+✅ Make **4 valid PRs** in October  
+✅ Support open-source projects  
+✅ Learn and improve your coding skills  
+
+---
+
+## 🛠 How to Contribute
+
+You can:
+
+✔ Add a new program or script  
+✔ Fix bugs or improve code quality  
+✔ Add documentation or comments  
+✔ Create new folders for missing languages  
+
+Any meaningful contribution is welcome.
+
+---
+
+## 📜 Rules
+
+1. Add your file inside the **correct language folder**
+2. Give your file a **unique and descriptive** name
+3. Explain logic using **comments** if possible
+4. No spam or duplicate solutions
+5. Single-line PRs without value will be **marked invalid**
+
+Maintainers want this repo to be a helpful resource for beginners.
+
+---
+
+## 🗂 Folder Structure
+
+📦 Hacktoberfest2021
+┣ 📁 C++
+┣ 📁 Python
+┣ 📁 Java
+┣ 📁 JavaScript
+┣ 📁 Web-Development
+┣ 📁 Other-Languages
+┗ 📄 README.md
 
 
-### Due to lot of spam pull request our repository got excluded from *Hacktoberfest 2021* but you can still contribute here by sending relevent PR.
 
+If your language does not exist, create a folder for it.
 
-### What you need to do in this event?
-**You need to generate 4 valid pull request and want to contribute in opensource**
+---
 
-### let's discuss how you can contribute in *hacktoberfest 2021* 🙌
+## ✅ How to Make a Pull Request
 
-### Rules for contribution.
-**1) Fork this repository.**
-
-**2) Star this repository.⭐**
-
-**3) Choose your favourite programming language.**
-
-**4) Add valid program (or code) on that sub repository.**
-
-**5) Don't forget to add the problem statement , comments and complexity.⚠️⚠️ It's a must part.**
-
-**6) Commit the change and generate a valid pull request.**
-
-**7) After carefully reviewing your code , if it is valid then it will be merged otherwise discarded.**
-
-### ⚠️⚠️ NOTE: Similar type of code(or program) will not be accepted. So kindly see the codes first and if you want to improve it then you can do that as well. That's also a kind of contribution and on that basis you will learn a lot.
-
-### Various programming language in which you can contribute.
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />   
-
-### Types of program which are accepted are:
-* Related to Data Structure and algorithms
-* Sorting and Searching algorithms
-
-### Nomenclature for submission.
-`nameofcode.extension
-for example hello.py`
-`shell_sort.cpp`
-
-### Various IDE you can use for coding are.
-<img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" /> <img src="https://img.shields.io/badge/Atom-66595C?style=for-the-badge&logo=Atom&logoColor=white" /> <img src="https://img.shields.io/badge/sublime_text-%23575757.svg?&style=for-the-badge&logo=sublime-text&logoColor=important" /> <img src="https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green" /> <img src="https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" /> <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white" /> <img src="https://img.shields.io/badge/VIM-%2311AB00.svg?&style=for-the-badge&logo=vim&logoColor=white" />
-
-### Subscribe to "**talkwithrd**" for more updates about *Hacktoberfest 2021*.
-#### [talkwithrd](https://www.youtube.com/channel/UCV_vCNcrCRY6S9a7-gdwYNA)
-
-## Keep smiling and keep coding 🥳
+```bash
+git clone https://github.com/<your-username>/Hacktoberfest2021
+cd Hacktoberfest2021
+git checkout -b my-new-branch
+git add .
+git commit -m "Added <program-name> in <language>"
+git push origin my-new-branch
